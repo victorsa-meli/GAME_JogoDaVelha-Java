@@ -6,6 +6,11 @@ import java.awt.event.ActionListener;
 public class JogoDaVelha extends JFrame {
 
     JButton[] bt = new JButton[9];
+    JLabel placar = new JLabel(" PLACAR");
+    JLabel px = new JLabel("X  0");
+    JLabel po = new JLabel("O  0");
+    int PX = 0;
+    int PO = 0;
 
     boolean xo = false;
     boolean[] click = new boolean[9];
@@ -151,6 +156,11 @@ public class JogoDaVelha extends JFrame {
             xo = true;
         }
         winner();
+    }
+
+    public void atualizar(){
+        px.setText("X "+ PX);
+        px.setText("O "+ PO);
     }
 
     public void winner (){
